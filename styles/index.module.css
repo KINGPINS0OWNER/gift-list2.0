@@ -91,3 +91,31 @@
 .darkMode .toggleButton {
   color: white;
 }
+.buttoncontainer {
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adjust the gap between buttons */
+}
+.tile-button {
+  padding: 10px; /* Adjust the padding to control the size */
+  width: 100px; /* Adjust the width to control the size */
+  height: 100px; /* Adjust the height to control the size */
+  background-color: gray;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  cursor: pointer;
+}
+
+.tile-button:hover {
+  transform: scale(1.1); /* Scale up the button on hover */
+}
+.pagecontainer {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+}
+.slideshowcontainer {
+  flex: 1;
+  text-align: center;
+}
