@@ -8,8 +8,7 @@ const BrotherSchema = new mongoose.Schema({
 
 const Brother = mongoose.models.Brother || mongoose.model('Brother', BrotherSchema);
 
-const MONGODB_URI = 
-"mongodb+srv://Cluster21379:IXvpnMs1sADIfz3z@cluster21379.ygrme2n.mongodb.net/"; // Replace with your MongoDB URL
+const MONGODB_URI = "mongodb+srv://Cluster21379:IXvpnMs1sADIfz3z@cluster21379.ygrme2n.mongodb.net/"; // Replace with your MongoDB URL
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
