@@ -1,5 +1,5 @@
 // pages/api/auth.js
-import { connectToDatabase } from 'pages/api/mongodb/dbConnect';
+import { connectToDatabase } from 'pages/api/mongodb/db';
 import bcrypt from 'bcrypt';
 
 export default async function handler(req, res) {
