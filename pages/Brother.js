@@ -1,37 +1,20 @@
-// pages/brother.js
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+const express = require('express')
+const mongoose = require('mongoose')
+const cors = require('cors')
+const UserApi = require('./Api/Brothersheet')
 
-function BrotherPage() {
-  const [items, setItems] = useState([]);
+const app = express()
+app.use(cors())
+app.use(express.json())
 
-  useEffect(() => {
-    async function fetchItems() {
-      try {
-        const response = await axios.get('/Api/item'); // Correct API route path
-        const data = response.data;
-        setItems(data);
-      } catch (error) {
-        console.error('Error fetching items:', error);
-      }
-    }
-    fetchItems();
-  }, []);
+mongoose.connect("mongodb+srv://Cluster21379:IXvpnMs1sADIfz3z@cluster21379.ygrme2n.mongodb.net/")
 
-  return (
-    <div>
-      <h1>Items from Brother Collection</h1>
-      <ul>
-        {items.map((item) => (
-          <li key={item._id}>
-            <h2>{item.name}</h2>
-            <p>{item.price}</p>
-            <p>{item.description}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+app.get('/getBrothersheet', (req, res) => {
+  UserApi.find()
+  .then(brothersheet => res.json(brothersheet))
+  .catch(err => res.json(err))
+})
 
-export default BrotherPage;
+app.listen(3001, () => {
+  console.log("Server is Running")
+})
