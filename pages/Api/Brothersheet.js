@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-const UserSchema = new mongoose.Schema({
+const BrotherSchema = new mongoose.Schema({
     item: String,
     price: Number,
     availability: String
 })
 
-const UserApi = mongoose.api("Brother", userSchema)
-module.exports = UserApi
+const BrotherApi = mongoose.api("Brother", BrotherSchema)
+module.exports = BrotherApi
