@@ -13,7 +13,7 @@ function Brother(){
 
     return (
         <div className="w-100 vh-100 d-flex justify-content-center align-items-center">
-        <divc className="w-50"></divc>
+        <div className="w-50"></div>
         <table classname="table"> 
             <thead>
                 <tr>
