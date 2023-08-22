@@ -39,7 +39,7 @@ const Home = () => {
     <button className={styles["tile-button"]}><Link href={"/Sister"}>Sister</Link></button>
     <button className={styles["tile-button"]}><Link href={"/Mother"}>Mother</Link></button>
     <button className={styles["tile-button"]}><Link href={"/Husband"}>Husband</Link></button>
-    <button className={styles["tile-button"]}><Link href={"/Brother"}>Brother</Link></button>
+    <button className={styles["tile-button"]}><Link href={"/brother"}>Brother</Link></button>
     <button className={styles["tile-button"]}><Link href={"/Father"}>Father</Link></button>
   </div>
   <div className={styles.slideshowcontainer}>
